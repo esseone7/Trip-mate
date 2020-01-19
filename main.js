@@ -1,7 +1,13 @@
 const listMenu = document.querySelectorAll('.listMenu');
 const message = document.querySelector('.message');
 
+const MY_API= '7c7a2e8a5fba7053cbf279ba513e69da';
+let myLatitude, myLongitude;
 
+navigator.geolocation.getCurrentPosition(function(pos){
+    myLatitude=pos.coords.latitude;
+    myLongitude=pos.coords.longitude;
+})
 
 
 
@@ -34,3 +40,4 @@ listMenu.forEach(element =>{
     element.addEventListener("mouseleave", handleMouseOut);
 })
 setInterval(displayMessage, 1000);
+

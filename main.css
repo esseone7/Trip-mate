@@ -88,13 +88,24 @@ div.widget {
     background-color: rgba(0,0,0,0.3);
 }
 
-div.day {
+div.weather {
     position: absolute;
-    width:100px;
+    width:300px;
     height:100px;
     border:solid;
-    left:50px;
-    top:50px;
+    border-color:rgb(79,79,79);
+    left:10px;
+    margin-top: 150px;
+}
+
+div.geo {
+    width:300px;
+    position: absolute;
+    border:solid;
+    border-color:rgb(79,79,79);
+    top:10px;
+    height:100px;
+    left:10px;
 }
 
 video.video {
