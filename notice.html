@@ -73,17 +73,26 @@
             position : relative;
             bottom : 10px;
         }
-        
-        input::placeholder{
+        .h1_search{
+            display : flex;
+            flex-direction : row;
+            width : 750px
+        }
+        .h1_search hi #div2{
+            flex-grow: 1;
+        }
+        #div1{
+            flex-grow : 200;
+            top:10px;
+        }
+        #div2{
+            position : relative;
+            top : 20px;
+        }
+            input::placeholder{
             padding : 10px;
             font-size : 15px;
-        }
-        .search_position{
-            position: relative;
-            left : 245px;
-            display: inline;
-            bottom : 5px;
-        }        
+        }    
         #search{
             width:300px; height:40px; font-size :17px; background-color : #F2F2F2; border : 2px solid #D8D8D8;
         }
@@ -131,6 +140,9 @@
         .notice_table td:nth-child(n+2):nth-child(-n+3){
             text-align: center;
         }
+        .notice_td{
+            font-size : 15px;
+        }
         tfoot td{
             border-bottom : 4px solid #424242;
             height : 10px 
@@ -163,26 +175,26 @@
             margin-top:50px;
             margin-bottom: 50px;
         }
-
         .footer{            
-            display: flex;           
+            display: flex;
+            flex-direction: row;
+            width : 1170px;
         }
         img{
             height : 100px;
         }
-        .company_info{
-            margin-right : 100px;
+        .company_info .customer_service{
+            flex-grow : 1;
+            line-height: 30px;
         }
-        .company_info td{
-            padding-left : 10px;
+        #div3{
+            flex-grow: 50;
         }
         .customer_service{
-            line-height: 33px;
-            padding-left : 190px;
-            }
-        .customer_service th{
-            text-align: left;
-            line-height: 33px;
+            line-height: 27px;
+        }
+        .customer_service th,td .cs_a{
+            font-size : 17px;
         }
     </style>
     <script></script>
@@ -203,11 +215,14 @@
         </nav>
         <main>
             <form>   
-                <h1>공지사항</h1>
-                <div class="search_position">
-                    <input id = "search" type="search" name="notice_search" placeholder ="검색어를 입력해주세요">
-                    <input id = "search_button" type="button" name="notice_search_button" value="검색">
-                </div>
+                <div class = "h1_search">
+                    <h1>공지사항</h1>
+                    <div id="div1"> </div>
+                    <div id="div2">
+                        <input id = "search" type="search" name="notice_search" placeholder ="검색어를 입력해주세요">
+                        <input id = "search_button" type="button" name="notice_search_button" value="검색">
+                    </div>
+                </div>    
                 <table class="notice_table">
                     <thead>
                         <tr>
@@ -218,12 +233,12 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td><a href="#">[점검완료] 0:00~2:00 점검완료</a></td>
+                            <td><a class="notice_td" href="#">[점검완료] 0:00~2:00 점검완료</a></td>
                             <td>2020.01.14</td>
                             <td>1054</td>
                         </tr>
                         <tr>
-                            <td><a href="#">새로운 여행정보 &lt;오사카&gt;가 추가 되었습니다</a></td>
+                            <td><a class="notice_td" href="#">새로운 여행정보 &lt;오사카&gt;가 추가 되었습니다</a></td>
                             <td>2020.01.14</td>
                             <td>54345</td>
                         </tr>
@@ -346,10 +361,11 @@
             <tr><td>팀원</td><td>|</td><td>김현태, 김용승, 권기범, 이형준, 유서희</td></tr>
             <tr><td>소속</td><td>|</td><td>이젠 컴퓨터 아카데미 종로 캠퍼스 / 자바 웹&amp;앱 개발자 양성 과정 / 2조</td></tr>
         </table>
+        <div id ="div3"></div>
         <table class= "customer_service">    
             <tr><th>고객지원</th></tr>
-            <tr><td><a href="#">FAQ(자주하는 질문)</a></td></tr>
-            <tr><td><a href="#">Q&amp;A(1:1 문의하기)</a></td></tr>
+            <tr><td><a class="cs_a" href="#">FAQ(자주하는 질문)</a></td></tr>
+            <tr><td><a class="cs_a" href="#">Q&amp;A(1:1 문의하기)</a></td></tr>
         </table>
         </div>        
     </footer>        
