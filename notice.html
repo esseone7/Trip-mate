@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        header{
+            height:200px;
+        }
+        body{
+            overflow-x:hidden; overflow-y:auto;
+        }
+        section{
+            display: flex;
+            position : relative;
+            left : 400px;
+            
+            }
+        nav{
+            flex-basis: 160px;
+            flex-shrink:0;
+        }
+        .nav{
+            border:1px solid #D8D8D8;
+            background-color:white;
+            width : 200px;
+            line-height : 100px;
+            text-align : center;
+            font-size : 20px;
+            font-weight : bold;
+        }
+        #category_name{
+            background-color: #6E6E6E;
+            color : white;
+            line-height: 80px;
+        }
+        #selected_category_div{
+            background-color: #E6E6E6;
+        }
+        #selected_category{
+            color : #2E9AFE;
+            text-decoration: none;            
+        }
+        #selected_category:hover{
+            text-decoration: underline;
+        }
+        .other_category_div{
+            background-color: #FAFAFA;
+        }
+        .other_category{
+            text-decoration : none;
+            color : black;
+        }
+        .other_category:hover{
+            text-decoration: underline;
+        }
+        main{
+            position : relative;
+            left : 100px;
+            top : 20px;
+            flex-basis: 500px;
+            background-color: #FAFAFA;
+            margin-top:-20px;
+            margin-left:-70px;
+            border:1px solid #D8D8D8;
+            }
+        form{
+            margin : 60px;
+        }
+        h1{
+            display: inline;
+            position : relative;
+            bottom : 10px;
+        }
+        
+        input::placeholder{
+            padding : 10px;
+            font-size : 15px;
+        }
+        .search_for_position{
+            position: relative;
+            left : 263px;
+            display: inline;
+            bottom : 5px;
+        }        
+        #search{
+            width:300px; height:40px; font-size :17px; background-color : #F2F2F2; border : 2px solid #D8D8D8;
+        }
+        #search:focus{
+            background-color: white;
+        }
+        #search_button{
+             width:80px; height:40px; border : none; background-color: #2E9AFE; color : white; font-weight : bold; 
+        }
+        #search_button:hover{
+            text-decoration : underline;
+        }
+        .notice_table{
+            border-collapse:collapse;
+            width :750px;
+        }
+        
+        th{
+            height: 40px;
+            border-top : 4px solid #424242;           
+            border-bottom : 1px solid gray;
+            background-color: #F2F2F2;
+            color : #424242;
+            font-weight: bold;
+        }
+        
+        td{
+            height : 30px;
+            padding : 12px;
+            padding-right : 20px;
+            padding-left: 20px;
+            font-size : 15px;
+            font-weight : 500;
+            color:#2E2E2E;
+            border-bottom:1px solid #D8D8D8;
+            }
+        td a{
+            color:#2E2E2E;
+            text-decoration: none;
+        }
+        td a:hover{
+           text-decoration: underline; 
+        }
+        td:nth-child(n+2):nth-child(-n+3){
+            text-align: center;
+        }
+        tfoot td{
+            border-bottom : 4px solid #424242;
+            height : 10px 
+        }
+        .button {
+            position : relative;
+            top : 20px;       
+        }
+        .page_button{
+            background-color : white;
+            border : 1px solid gray;
+            width : 30px;
+            height : 30px;
+            font-weight : bold;
+            font-size: 15px;
+            color : #2E2E2E;
+        }
+        .page_button#_selected{
+            background-color:#2E9AFE;
+            border:1px solid #0080FF;
+            color:white;
+        }
+        .page_button#direction{
+            position : relative;
+            left : 5px;
+        }
+        footer{
+            height : 200px;
+        }
+    </style>
+    <script></script>
+</head>
+<body>  
+    <header>
+        
+    </header>
+    
+    <section>
+        <nav>
+        <div class="nav">
+           <div id="category_name">고객센터</div>
+           <div id="selected_category_div"><a id="selected_category" href="#">공지사항</a></div>
+           <div class="other_category_div"><a class="other_category" href="#">FAQ</a></div>
+           <div class="other_category_div"> <a class="other_category" href="#">Q&amp;A</a></div> 
+        </div>
+        </nav>
+        <main>
+            <form>   
+                <h1>공지사항</h1>
+                <div class="search_for_position">
+                    <input id = "search" type="search" name="notice_search" placeholder ="검색어를 입력해주세요">
+                    <input id = "search_button" type="button" name="notice_search_button" value="검색">
+                </div>
+                <table class="notice_table">
+                    <thead>
+                        <tr>
+                            <th>제목</th>
+                            <th>등록일</th>
+                            <th>조회수</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><a href="#">[점검완료] 0:00~2:00 점검완료</a></td>
+                            <td>2020.01.14</td>
+                            <td>1054</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">새로운 여행정보 &lt;오사카&gt;가 추가 되었습니다</a></td>
+                            <td>2020.01.14</td>
+                            <td>54345</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                    <tfoot>            
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tfoot>    
+                </table>
+                <center>
+                <div class="button">
+                    <input class="page_button" id="_selected" type="button" name="page1" value="1" disabled="disabled">
+                    <input class="page_button" type="button" name="page2" value="2">
+                    <input class="page_button" type="button" name="page3" value="3">
+                    <input class="page_button" id ="direction" type="button" name="next" value=">">
+                    <input class="page_button" id ="direction" type="button" name="last_page" value=">>">
+                </div>
+              </center>  
+            </form>
+        </main>    
+    </section>
+    <footer>
+        
+    </footer>        
+</body>
+</html>
