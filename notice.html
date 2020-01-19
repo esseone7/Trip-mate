@@ -46,12 +46,12 @@
         .other_category_div{
             background-color: #FAFAFA;
         }
-        .other_category{
+        a{
             text-decoration : none;
             color : black;
             font-size : 18px;             
         }
-        .other_category:hover{
+        a:hover{
             text-decoration: underline;
         }
         main{
@@ -78,7 +78,7 @@
             padding : 10px;
             font-size : 15px;
         }
-        .search_for_position{
+        .search_position{
             position: relative;
             left : 245px;
             display: inline;
@@ -139,7 +139,7 @@
             position : relative;
             top : -15px;       
         }
-        .page_button{
+        input[type=button]{
             background-color : white;
             border : 1px solid gray;
             width : 30px;
@@ -148,12 +148,12 @@
             font-size: 15px;
             color : #2E2E2E;
         }
-        .page_button#_selected{
+        input[type=button]#_selected{
             background-color:#2E9AFE;
             border:1px solid #0080FF;
             color:white;
         }
-        .page_button#direction{
+        input[type=button].direction{
             position : relative;
             left : 5px;
         }
@@ -197,14 +197,14 @@
         <div class="nav">
            <div id="category_name">고객센터</div>
            <div id="selected_category_div"><a id="selected_category" href="#">공지사항</a></div>
-           <div class="other_category_div"><a class="other_category" href="#">FAQ</a></div>
-           <div class="other_category_div"> <a class="other_category" href="#">Q&amp;A</a></div> 
+           <div class="other_category_div"><a href="#">FAQ</a></div>
+           <div class="other_category_div"><a href="#">Q&amp;A</a></div> 
         </div>
         </nav>
         <main>
             <form>   
                 <h1>공지사항</h1>
-                <div class="search_for_position">
+                <div class="search_position">
                     <input id = "search" type="search" name="notice_search" placeholder ="검색어를 입력해주세요">
                     <input id = "search_button" type="button" name="notice_search_button" value="검색">
                 </div>
@@ -328,11 +328,11 @@
                 </table>
                 <center>
                 <div class="button">
-                    <input class="page_button" id="_selected" type="button" name="page1" value="1" disabled="disabled">
-                    <input class="page_button" type="button" name="page2" value="2">
-                    <input class="page_button" type="button" name="page3" value="3">
-                    <input class="page_button" id ="direction" type="button" name="next" value=">">
-                    <input class="page_button" id ="direction" type="button" name="last_page" value=">>">
+                    <input id="_selected" type="button" name="page1" value="1" disabled="disabled">
+                    <input type="button" name="page2" value="2">
+                    <input type="button" name="page3" value="3">
+                    <input class ="direction" type="button" name="next" value=">">
+                    <input class ="direction" type="button" name="last_page" value=">>">
                 </div>
               </center>  
             </form>
