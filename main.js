@@ -13,12 +13,16 @@ navigator.geolocation.getCurrentPosition(function(pos){
 
 function handleMouseIn(event){
     const subMenu=event.target.children[1];
+    const innerTxt=event.target.children[0];
     subMenu.classList.remove('displayNone');
+    innerTxt.style.backgroundColor="rgb(14,160,218)";
 }
 
 function handleMouseOut(event){
     const subMenu=event.target.children[1];
+    const innerTxt=event.target.children[0];
     subMenu.classList.add('displayNone');
+    innerTxt.style.backgroundColor="skyblue";
 }
 
 function displayMessage(){

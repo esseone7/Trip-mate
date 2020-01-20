@@ -48,8 +48,7 @@ div.navi>div{
 div.text{
     text-align: center;
     font-size:35px;
-    padding-top:10px;
-    border:dotted;
+    padding-top:15px;
     height: 56px;
     cursor: pointer;
 }
